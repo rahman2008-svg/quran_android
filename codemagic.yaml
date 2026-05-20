@@ -6,7 +6,7 @@ workflows:
     instance_type: mac_mini_m2
 
     environment:
-      java: 17
+      java: 21          # ← এটাই সবচেয়ে গুরুত্বপূর্ণ পরিবর্তন
       vars:
         GRADLE_OPTS: "-Xmx4g -Dorg.gradle.daemon=false"
 
