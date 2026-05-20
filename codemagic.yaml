@@ -2,14 +2,12 @@ version: 2
 workflows:
   quran-android-workflow:
     name: Quran Android Build
-    max_build_duration: 45
+    max_build_duration: 60
     instance_type: mac_mini_m2
     environment:
       vars:
-        TERMUX_PACKAGE_VARIANT: "apt-android-7"   # যদি দরকার হয়, নাহলে সরিয়ে দিতে পারেন
+        TERMUX_PACKAGE_VARIANT: "apt-android-7"   # অপ্রয়োজনীয় হলে সরিয়ে দিতে পারেন
       java: 17
-      # android_signing:          # যদি keystore আপলোড করে থাকেন তাহলে এটি যোগ করবেন
-      #   - your_keystore_reference_name
 
     triggering:
       events:
@@ -17,8 +15,6 @@ workflows:
         - pull_request
       branch_patterns:
         - pattern: main
-          include: true
-        - pattern: master
           include: true
 
     scripts:
@@ -29,11 +25,11 @@ workflows:
         script: |
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
 
-      - name: Build Debug APK
-        script: ./gradlew assembleDebug --stacktrace
+      - name: Build Madani Debug APK
+        script: ./gradlew assembleMadaniDebug --stacktrace
 
-      - name: Build Release APK
-        script: ./gradlew assembleRelease --stacktrace
+      - name: Build Madani Release APK
+        script: ./gradlew assembleMadaniRelease --stacktrace
 
     artifacts:
       - "**/build/outputs/**/*.apk"
