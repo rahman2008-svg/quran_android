@@ -1,13 +1,14 @@
 version: 2
 workflows:
   quran-android-workflow:
-    name: Quran Android Build
-    max_build_duration: 60
+    name: Quran Android - Madani Build
+    max_build_duration: 75
     instance_type: mac_mini_m2
+
     environment:
-      vars:
-        TERMUX_PACKAGE_VARIANT: "apt-android-7"   # অপ্রয়োজনীয় হলে সরিয়ে দিতে পারেন
       java: 17
+      vars:
+        GRADLE_OPTS: "-Xmx4g -Dorg.gradle.daemon=false"
 
     triggering:
       events:
@@ -25,21 +26,20 @@ workflows:
         script: |
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
 
+      - name: Clean Project
+        script: ./gradlew clean --quiet
+
       - name: Build Madani Debug APK
         script: ./gradlew assembleMadaniDebug --stacktrace
-
-      - name: Build Madani Release APK
-        script: ./gradlew assembleMadaniRelease --stacktrace
 
     artifacts:
       - "**/build/outputs/**/*.apk"
       - "**/build/outputs/**/*.aab"
-      - "**/build/outputs/mapping/**/mapping.txt"
 
     publishing:
       email:
         recipients:
-          - your.email@example.com
+          - আপনারইমেইল@gmail.com
         notify:
           success: true
           failure: true
