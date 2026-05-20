@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-  <string name="app_name">Quran</string>
+  <string name="app_name">NoorVerse Quran</string>
   <string name="downloadPrompt_title">Download Required Files?</string>
-  <string name="downloadPrompt">In order for Quran Android to work properly,
+  <string name="downloadPrompt">In order for NoorVerse Android to work properly,
         we need to download some files. If you do not do this now, the app
         may not work reliably and will require an Internet connection for reading.
         Would you like to download the required files now?
@@ -10,15 +10,15 @@
   <string name="downloadTabletPrompt">We recently added improved images for
         tablets. Would you like to download these images now?</string>
   <string name="downloadImportantPrompt">There is a small yet important update
-        for the Quran images you have on your device. Would you like to download this
+        for the NoorVerse Quran images you have on your device. Would you like to download this
         patch now?
     </string>
   <string name="downloadPrompt_ok">Yes</string>
   <string name="downloadPrompt_no">No</string>
   <string name="downloading_message">Please wait for the files to download (resume supported).</string>
   <string name="extracting_title">Processing&#8230;</string>
-  <string name="menu_about">About Us</string>
-  <string name="menu_other_apps">Other apps</string>
+  <string name="menu_about">About NoorVerse/string>
+  <string name="menu_other_apps">Nexavora apps</string>
   <string name="menu_settings">Settings</string>
   <string name="menu_jump_last_page">Last page</string>
   <string name="menu_bookmarks">Bookmarks</string>
@@ -26,7 +26,7 @@
   <string name="menu_bookmarks_ayah">Ayah Bookmarks</string>
   <string name="menu_sort">Sort</string>
   <string name="menu_sort_date">Date Added</string>
-  <string name="menu_sort_location">Location in Quran</string>
+  <string name="menu_sort_location">Location in NoorVerse Quran</string>
   <string name="menu_sort_group_by_tags">Group by Tags</string>
   <string name="menu_show_recents" translatable="false">@string/recent_pages</string>
   <string name="menu_show_date">Show Date</string>
@@ -41,12 +41,12 @@
   <string name="please_wait">Please wait…</string>
 
   <!-- about -->
-  <string name="about_description">Quran for Android is a free Quran application. Please do not forget the contributors in your prayers.</string>
+  <string name="about_description">NoorVerse Quran is a free Quran application. Please do not forget the contributors in your prayers.</string>
   <string name="about_data_sources">Data Sources</string>
   <string name="about_images">Images</string>
   <string name="about_madani_images">The Quran images are based on the fonts from the King Fahd Quran Printing Complex</string>
   <string name="about_madani_images_url" translatable="false">https://github.com/quran/quran.com-images</string>
-  <string name="about_naskh_images">The Quran images for the Naskh app are taken (with permission) from SHL Info Systems</string>
+  <string name="about_naskh_images">The Quran images are based on the fonts from the King Fahd Quran Printing Complex (used in NoorVerse)</string>
   <string name="about_naskh_images_url" translatable="false">http://www.shlinfosystems.com</string>
   <string name="about_qaloon_images">Qaloon images are used with the permission of Nous Memes Editions Et Diffusion (Tunisia)</string>
   <string name="about_quranicaudio" translatable="false">QuranicAudio</string>
@@ -94,7 +94,7 @@
   <string name="about_sliding_panel_url" translatable="false">https://github.com/umano/AndroidSlidingUpPanel</string>
   <string name="about_others">Others</string>
   <string name="about_contributors">Contributors</string>
-  <string name="about_contributors_summary">A list of people who contributed to the development of Quran for Android</string>
+  <string name="about_contributors_summary">A list of people who contributed to the development of NoorVersehttps://github.com/quran/quran_android/blob/main/CONTRIBUTORS.md</string>
   <string name="about_contributors_url" translatable="false">https://github.com/quran/quran_android/blob/main/CONTRIBUTORS.md</string>
 
   <!-- help -->
@@ -399,6 +399,6 @@
   <string name="prefs_split_page_and_translation_summary">In dual page mode with translations, Quran page and translation is shown</string>
 
   <!-- notification channel names [CHAR LIMIT=40] -->
-  <string name="notification_channel_download">Quran Downloads</string>
-  <string name="notification_channel_audio">Quran Recitation</string>
+  <string name="notification_channel_download">NoorVerse Quran Downloads</string>
+  <string name="notification_channel_audio">NoorVerseQuran Recitation</string>
 </resources>
