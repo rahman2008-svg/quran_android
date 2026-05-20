@@ -46,7 +46,7 @@
   <string name="about_images">Images</string>
   <string name="about_madani_images">The Quran images are based on the fonts from the King Fahd Quran Printing Complex</string>
   <string name="about_madani_images_url" translatable="false">https://github.com/quran/quran.com-images</string>
-  <string name="about_naskh_images">The Quran images are based on the fonts from the King Fahd Quran Printing Complex (used in NoorVerse)</string>
+  <string name="about_naskh_images">The Quran images are based on the fonts from the King Fahd Quran Printing Complex</string>
   <string name="about_naskh_images_url" translatable="false">http://www.shlinfosystems.com</string>
   <string name="about_qaloon_images">Qaloon images are used with the permission of Nous Memes Editions Et Diffusion (Tunisia)</string>
   <string name="about_quranicaudio" translatable="false">QuranicAudio</string>
