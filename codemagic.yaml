@@ -1,0 +1,55 @@
+# codemagic.yaml
+version: 2
+workflows:
+  default-workflow:
+    name: Quran Android CI
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+    environment:
+      vars:
+        # আপনার প্রয়োজন অনুযায়ী পরিবর্তন করুন
+        TERMUX_PACKAGE_VARIANT: "apt-android-7"   # যদি Termux রিলেটেড কিছু থাকে
+      flutter: 
+        channel: stable
+        version: latest
+      xcode: latest
+      java: 17          # বেশিরভাগ মডার্ন অ্যান্ড্রয়েড প্রজেক্টের জন্য
+      gradle: true
+
+    triggering:
+      events:
+        - push
+        - pull_request
+      branch_patterns:
+        - pattern: main
+          include: true
+        - pattern: master
+          include: true
+        - pattern: develop
+          include: true
+
+    scripts:
+      - name: Gradle Permissions
+        script: chmod +x gradlew
+
+      - name: Assemble Debug APK
+        script: |
+          ./gradlew assembleDebug --stacktrace
+
+      - name: Assemble Release APK (signed)
+        script: |
+          ./gradlew assembleRelease --stacktrace
+
+    artifacts:
+      - build/**/outputs/**/*.apk
+      - build/**/outputs/**/*.aab
+      - build/**/outputs/mapping/**/mapping.txt
+
+    publishing:
+      # Email notification
+      email:
+        recipients:
+          - your.email@example.com
+        notify:
+          success: true
+          failure: true
